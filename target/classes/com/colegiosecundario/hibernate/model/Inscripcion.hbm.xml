@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.colegiosecundario.hibernate.model.Inscripcion" table="Inscripcion" schema="ColegioSecundario">
+        <!--  <id name="dni">
+            <column name="dni" sql-type="int" not-null="true"/>
+        </id> Comento estas lineas porque esta tabla no tiene clave principal--> 
+        
+        <property name="nota">
+            <column name="nota" sql-type="float" not-null=false"/>
+        </property>
+
+        <!-- comento esta parte porque en mi base no hay una relacion muchos a uno (many to one)
+        <many-to-one name="direccion" column="idDireccion" class="com.cientooncemil.hibernate.model.Direccion"/>-->
+        
+    </class>
+</hibernate-mapping>
